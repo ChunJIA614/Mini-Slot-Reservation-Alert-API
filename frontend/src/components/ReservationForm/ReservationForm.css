@@ -1,0 +1,145 @@
+.reservation-form-card {
+  min-height: 100%;
+}
+
+.reservation-form {
+  display: grid;
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.form-field {
+  display: grid;
+  gap: 7px;
+}
+
+.form-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-field label {
+  color: #273249;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.form-field input {
+  width: 100%;
+  height: 48px;
+  padding: 0 14px;
+  color: #172033;
+  background: #f9fafc;
+  border: 1px solid #dce2eb;
+  border-radius: 10px;
+  transition:
+    border-color 140ms ease,
+    box-shadow 140ms ease,
+    background-color 140ms ease;
+}
+
+.form-field input:hover {
+  border-color: #bec8d8;
+}
+
+.form-field input:focus {
+  background: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: 0;
+}
+
+.form-field input[aria-invalid='true'] {
+  border-color: #dc2626;
+}
+
+.form-field input::placeholder {
+  color: #667085;
+}
+
+.form-field input:disabled {
+  color: #667085;
+  cursor: wait;
+  background: #f2f4f7;
+}
+
+.field-help,
+.field-error {
+  min-height: 17px;
+  margin: 0;
+  font-size: 0.73rem;
+  line-height: 1.4;
+}
+
+.field-help {
+  color: #667085;
+}
+
+.field-error {
+  color: #b42318;
+  font-weight: 650;
+}
+
+.number-input-wrap {
+  position: relative;
+}
+
+.number-input-wrap input {
+  padding-right: 58px;
+}
+
+.number-input-wrap > span {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  color: #8490a3;
+  font-size: 0.75rem;
+  font-weight: 700;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 0 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 750;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    transform 140ms ease;
+}
+
+.primary-button {
+  margin-top: 2px;
+  color: #ffffff;
+  background: #2563eb;
+  border: 1px solid #2563eb;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.primary-button:disabled,
+.secondary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.58;
+}
+
+@media (max-width: 520px) {
+  .form-field-row {
+    grid-template-columns: 1fr;
+  }
+}

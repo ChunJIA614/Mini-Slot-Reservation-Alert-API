@@ -1,0 +1,16 @@
+@baseUrl = http://localhost:5050
+
+### Create a selected-time reservation (09:00 Malaysia time)
+POST {{baseUrl}}/api/reservations
+Content-Type: application/json
+
+{
+  "slotId": "slot-1",
+  "userId": "user-7",
+  "startUtc": "2026-08-13T01:00:00Z",
+  "durationMinutes": 120
+}
+
+### Find the longest free window in that fixed service day
+GET {{baseUrl}}/api/slots/slot-1/availability/longest?serviceDate=2026-08-13
+Accept: application/json
